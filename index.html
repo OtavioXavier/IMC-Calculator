@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My IMC Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style/style.css" />
+  </head>
+  <body>
+    <div class="alert">Digite somente numeros</div>
+    <div class="container">
+      <main class="bloco">
+        <form>
+          <h1 class="tittle">Meu IMC</h1>
+          <div class="input-wrapper">
+            <label for="inputKG">Seu peso (Kg)</label>
+            <input id="inputKG" placeholder="75" />
+          </div>
+          <div class="input-wrapper">
+            <label for="inputCm">Sua Altura (cm)</label>
+            <input id="inputCm" placeholder="180" onchange="hideError"/>
+          </div>
+
+          <button type="submit">Calcular IMC</button>
+        </form>
+      </main>
+    </div>
+    <div class="modal-wrapper">
+      <div class="modal bloco">
+           <h2 class="tittle">
+             <button class="close" onclick="closePop()"><img src="./src/images/close.png" alt="close button" class="close"></button>
+             <span>Seu IMC é de 24.5</span>
+           </h2>
+      </div>
+    </div>
+  </body>
+  <script src="./src/js/script.js" type="module"></script>
+</html>
