@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hiden {
+  display: none;
+}
+
+body {
+  background: linear-gradient(
+    113deg,
+    #fdfffc 11.28%,
+    #b4d5d9 51.91%,
+    #246eb9 100%
+  );
+  font-family: "Raleway", sans-serif;
+}
+
+.bloco {
+  background-color: #fdfffc;
+  max-width: 19.4rem;
+  max-height: 22rem;
+  border-radius: 1rem;
+  margin-inline: auto;
+  padding: 2.7rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+input {
+  font-family: "Inter", sans-serif;
+
+  background-color: #b4d5d9;
+  border: none;
+}
+
+form button,
+input {
+  width: 14rem;
+  height: 2.4rem;
+  color: #fdfffc;
+  font-size: 1rem;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+form button {
+  background-color: #f06543;
+  border: none;
+  border-radius: 0.4rem;
+  transition: background .3s;
+  cursor: pointer   ;
+
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+form h1 {
+  margin-bottom: 0.5rem;
+}
+
+form label {
+  font-size: 0.8rem;
+  line-height: 1.8rem;
+}
+
+.input-wrapper + .input-wrapper {
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+form input:focus {
+  outline: 2px solid #f06543;
+}
+
+form input::placeholder {
+  color: #717070;
+}
+
+form button:hover {
+    background-color: #bc4f34;
+}
+
+.modal-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-wrapper {
+ position: absolute;
+ inset: 0;
+ display: grid;
+ place-content: center;
+ background: rgba(0, 0, 0, 0.5);
+ 
+ opacity: 0;
+ visibility: hidden;
+}
+
+.modal {
+    position: relative;
+}
+
+.modal button {
+    background: none;
+    border: none;
+    position: absolute;
+    top:1rem;
+    right: 1rem;
+    cursor: pointer;
+    transition: transform .3s;
+
+}
+
+.close {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
+}
+
+.alert {
+    background-color: #bc3434;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+    padding: .4rem;
+    color: #fdfffc;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-3rem);
+    transition: transform .5s;
+}
+
+.alert.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
